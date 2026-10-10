@@ -1,0 +1,438 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Outfit:wght@100..900&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#2c3039","error":"#ffb4ab","on-secondary-container":"#fffbff","secondary-container":"#e1037d","on-secondary-fixed":"#3e001e","on-surface-variant":"#b9cacb","error-container":"#93000a","on-primary":"#00373a","primary-fixed-dim":"#00dce6","surface-container-highest":"#31353e","surface-container-lowest":"#0a0e16","surface":"#0f131c","on-primary-container":"#006a70","on-tertiary-container":"#805800","background":"#0f131c","primary-fixed":"#6ff6ff","surface-variant":"#31353e","tertiary-fixed-dim":"#ffba38","on-tertiary-fixed":"#281900","surface-container-low":"#181c24","surface-tint":"#00dce6","primary-container":"#00f2fe","surface-container":"#1c2028","inverse-primary":"#00696f","tertiary-fixed":"#ffdeac","on-tertiary":"#432c00","inverse-surface":"#dfe2ee","secondary":"#ffb0c9","on-background":"#dfe2ee","surface-dim":"#0f131c","secondary-fixed-dim":"#ffb0c9","secondary-fixed":"#ffd9e3","outline":"#849495","surface-container-high":"#262a33","on-error-container":"#ffdad6","on-secondary":"#640034","surface-bright":"#353942","outline-variant":"#3a494b","on-primary-fixed":"#002022","tertiary-container":"#ffd491","on-primary-fixed-variant":"#004f53","primary":"#e0fdff","tertiary":"#fff5ec","on-secondary-fixed-variant":"#8e004c","on-surface":"#dfe2ee","on-tertiary-fixed-variant":"#604100","on-error":"#690005"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-xs":"0.25rem","margin":"2rem","space-md":"1rem"},fontFamily:{"label-md":["JetBrains Mono"],"body-md":["Inter"],"headline-xl-mobile":["Outfit"],"headline-xl":["Outfit"],"body-lg":["Inter"],"label-lg":["JetBrains Mono"],"headline-lg":["Outfit"],"headline-lg-mobile":["Outfit"],"headline-sm":["Outfit"],"headline-md":["Outfit"],"label-sm":["JetBrains Mono"],"body-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"500"}],"body-md":["15px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"headline-xl-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"800"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.06em",fontWeight:"600"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"0em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.1em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(255,46,147,0.05)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="Neon TicTacToe Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw3r2ESWvfrXc2vMP2MxxrO0xf-gxAmCwh4RbH5HR5CEhQ5tuAX_SFhc6UO3on87D6ipPuxaLeBtxgKjyG2oECGj4RU1pQcf9mhqIzADys4FZe3KZDUKehTDQ9OKlBRhYUbXGt26GJRBh2Gw1Eqh_X0r_8PuNr5j0OPeoeDsSeGM3gaPX3x5Yj6-CnUCE9RPzKIWKHLfp821ddc2JOAy3n0i464H_sjGn8tAFuUgcWeGWdmtQh5EannA"><div class="flex flex-col"></div></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle Audio and Haptics" class="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Settings" class="min-w-[44px] min-h-[44px] w-11 h-11 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-lg select-none">
+<!-- Top Section: Match Telemetry & Turn Status -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Turn Indicator & Match Pill -->
+<div class="flex items-center justify-between gap-space-sm">
+<div id="turn-pill" class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1 rounded-full shadow-sm transition-all duration-300">
+<span class="relative flex h-2.5 w-2.5">
+<span id="turn-ping" class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span id="turn-dot" class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container"></span>
+</span>
+<span id="turn-text" class="font-label-md text-label-md uppercase text-primary tracking-wider font-semibold transition-colors duration-300">Player X's Turn</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container px-space-sm py-1 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">timer</span>
+<span id="timer-text" class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">15s</span>
+<span class="text-outline-variant font-label-sm text-label-sm">|</span>
+<span id="round-text" class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Round 1</span>
+</div>
+</div>
+<!-- Turn Timer Gauge -->
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div id="turn-gauge" class="h-full bg-primary-container rounded-full shadow-[0_0_12px_rgba(0,242,254,0.7)] transition-[width] duration-100 ease-linear" style="width: 100%;"></div>
+</div>
+<!-- Score Brackets: Holographic Duo Cards -->
+<div class="grid grid-cols-7 gap-space-xs items-center mt-space-xs">
+<!-- Player X Card -->
+<div id="card-player-x" class="col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high ring-2 ring-[#00f2fe] shadow-[0_0_24px_rgba(0,242,254,0.45)] scale-[1.03]">
+<div id="glow-player-x" class="absolute -right-4 -top-4 w-16 h-16 bg-primary-container/25 rounded-full blur-xl pointer-events-none transition-opacity duration-300"></div>
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-1.5">
+<div id="icon-box-x" class="w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-[0_0_10px_rgba(0,242,254,0.4)] transition-all">
+<span class="material-symbols-outlined text-[16px] font-bold">close</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">PLAYER X</span>
+</div>
+<span id="badge-player-x" class="bg-primary/20 text-primary-fixed border border-primary/30 font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest font-bold transition-all shadow-[0_0_8px_rgba(0,242,254,0.3)]">YOUR TURN</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight"><span id="score-x">0</span></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Wins</span>
+</div>
+</div>
+<!-- Ties Counter -->
+<div class="col-span-1 bg-surface-container-low py-space-sm px-1 rounded-lg flex flex-col items-center justify-center gap-0.5 shadow-sm text-center">
+<span class="font-label-sm text-label-sm text-outline tracking-wider font-semibold uppercase scale-90">TIE</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold"><span id="score-tie">0</span></span>
+</div>
+<!-- Player O Card -->
+<div id="card-player-o" class="col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-low opacity-40 scale-95 ring-0 shadow-none">
+<div id="glow-player-o" class="absolute -right-4 -top-4 w-16 h-16 bg-secondary-container/25 rounded-full blur-xl pointer-events-none transition-opacity duration-300 opacity-0"></div>
+<div class="flex items-center justify-between w-full">
+<div class="flex items-center gap-1.5">
+<div id="icon-box-o" class="w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary-container transition-all">
+<span class="material-symbols-outlined text-[16px] font-bold">radio_button_unchecked</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-secondary">PLAYER O</span>
+</div>
+<span id="badge-player-o" class="bg-surface-container text-outline font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest transition-all">WAITING</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md text-secondary font-bold tracking-tight"><span id="score-o">0</span></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Wins</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Section: 3x3 Cybernetic Grid Arena -->
+<div class="my-space-lg flex justify-center items-center">
+<div class="w-full max-w-[340px] aspect-square bg-surface-container-low p-space-sm rounded-xl shadow-xl flex flex-col justify-between relative">
+<!-- Ambient Board Glow -->
+<div class="absolute inset-4 bg-primary-container/5 rounded-xl blur-2xl pointer-events-none"></div>
+<!-- 3x3 Interactive Battle Arena -->
+<div class="grid grid-cols-3 grid-rows-3 gap-space-sm w-full h-full relative z-10" id="board-grid">
+<!-- Cell 0: X -->
+<button aria-label="Cell Top Left: Player X" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group">
+<span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black">close</span>
+</button>
+<!-- Cell 1: O -->
+<button aria-label="Cell Top Center: Player O" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group">
+<span class="material-symbols-outlined text-[40px] text-secondary-container drop-shadow-[0_0_12px_rgba(225,3,125,0.85)] font-black">radio_button_unchecked</span>
+</button>
+<!-- Cell 2: Empty Interactive with Targeting Reticle -->
+<button aria-label="Cell Top Right: Empty" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group"><span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black transition-transform duration-200">close</span></button>
+<!-- Cell 3: O -->
+<button aria-label="Cell Middle Left: Player O" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group">
+<span class="material-symbols-outlined text-[40px] text-secondary-container drop-shadow-[0_0_12px_rgba(225,3,125,0.85)] font-black">radio_button_unchecked</span>
+</button>
+<!-- Cell 4: X -->
+<button aria-label="Cell Center: Player X" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group">
+<span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black">close</span>
+</button>
+<!-- Cell 5: Empty -->
+<button aria-label="Cell Middle Right: Empty" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group"><span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black transition-transform duration-200">close</span></button>
+<!-- Cell 6: Empty -->
+<button aria-label="Cell Bottom Left: Empty" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group"><span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black transition-transform duration-200">close</span></button>
+<!-- Cell 7: Empty -->
+<button aria-label="Cell Bottom Center: Empty" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group"><span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black transition-transform duration-200">close</span></button>
+<!-- Cell 8: X -->
+<button aria-label="Cell Bottom Right: Player X" class="w-full h-full bg-surface-container-high rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group">
+<span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Tactical Controls & Game Mode HUD -->
+<div class="flex flex-col gap-space-sm mt-auto">
+<!-- Match Setting & Mode Badges -->
+<div class="flex items-center justify-between px-space-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">sports_esports</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface">PvP Local Arena</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest px-2 py-0.5 rounded-full font-label-sm text-label-sm tracking-wider uppercase text-on-surface font-medium">Ranked Beta</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Restart Game Button (Tactical Ghost) -->
+<button id="btn-restart" class="w-full min-h-[48px] bg-surface-container-high hover:bg-surface-bright text-on-surface active:scale-95 transition-all rounded-lg flex items-center justify-center gap-space-xs shadow-sm" type="button"><span class="material-symbols-outlined text-[18px]">replay</span><span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Restart</span>
+</button>
+<!-- New Round Button (Primary Neon Cyber) -->
+<button id="btn-new-round" class="w-full min-h-[48px] bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container active:scale-95 transition-all rounded-lg flex items-center justify-center gap-space-xs shadow-[0_0_16px_rgba(0,242,254,0.35)] font-bold" type="button"><span class="material-symbols-outlined text-[20px] font-bold">play_arrow</span><span class="font-label-md text-label-md uppercase tracking-wider font-bold">New Round</span>
+</button>
+</div>
+<!-- Match Footer Hint -->
+<div class="text-center py-space-xs">
+<span class="font-label-sm text-label-sm text-outline tracking-widest uppercase">Tap any empty cell to place marker</span>
+</div>
+</div>
+</div>
+<script>
+  let board = Array(9).fill(null);
+  let currentPlayer = 'X';
+  let isGameOver = false;
+  let scores = { X: 0, O: 0, tie: 0 };
+  let roundNumber = 1;
+
+  const TURN_DURATION = 15; // 15 seconds per turn
+  let timeLeft = TURN_DURATION;
+  let timerInterval = null;
+
+  const WIN_COMBOS = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6]
+  ];
+
+  const audioCtx = (window.AudioContext || window.webkitAudioContext) ? new (window.AudioContext || window.webkitAudioContext)() : null;
+  function playBeep(freq = 440, type = 'sine', duration = 0.08) {
+    if (!audioCtx) return;
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch (e) {}
+  }
+
+  function startTurnTimer() {
+    stopTurnTimer();
+    if (isGameOver) return;
+
+    timeLeft = TURN_DURATION;
+    updateTimerVisuals();
+
+    timerInterval = setInterval(() => {
+      timeLeft = Math.max(0, timeLeft - 0.1);
+      updateTimerVisuals();
+
+      // Warning beep on final 3 seconds (each full second)
+      if (timeLeft <= 3.05 && timeLeft > 0.05 && Math.abs(timeLeft - Math.round(timeLeft)) < 0.06) {
+        playBeep(880, 'sine', 0.05);
+      }
+
+      if (timeLeft <= 0) {
+        stopTurnTimer();
+        // Time expired: alert sound and pass turn
+        playBeep(260, 'sawtooth', 0.25);
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        render();
+      }
+    }, 100);
+  }
+
+  function stopTurnTimer() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
+
+  function updateTimerVisuals() {
+    const timerText = document.getElementById('timer-text');
+    const gauge = document.getElementById('turn-gauge');
+    const roundText = document.getElementById('round-text');
+
+    if (roundText) roundText.textContent = "Round " + roundNumber;
+
+    if (timerText) {
+      const secs = Math.ceil(timeLeft);
+      timerText.textContent = secs + "s";
+      if (timeLeft <= 3) {
+        timerText.className = "font-label-sm text-label-sm uppercase tracking-wider text-[#ffb4ab] font-bold animate-pulse";
+      } else {
+        timerText.className = "font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium";
+      }
+    }
+
+    if (gauge) {
+      const pct = (timeLeft / TURN_DURATION) * 100;
+      gauge.style.width = pct + "%";
+      if (isGameOver) {
+        gauge.style.width = "0%";
+      } else if (currentPlayer === 'X') {
+        gauge.className = "h-full bg-primary-container rounded-full shadow-[0_0_12px_rgba(0,242,254,0.7)] transition-[width] duration-100 ease-linear";
+      } else {
+        gauge.className = "h-full bg-secondary-container rounded-full shadow-[0_0_12px_rgba(225,3,125,0.7)] transition-[width] duration-100 ease-linear";
+      }
+    }
+  }
+
+  function checkWinner() {
+    for (const combo of WIN_COMBOS) {
+      const [a, b, c] = combo;
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        return { winner: board[a], combo };
+      }
+    }
+    if (board.every(cell => cell !== null)) {
+      return { winner: 'TIE', combo: null };
+    }
+    return null;
+  }
+
+  function updateActiveVisuals(winnerInfo) {
+    const cardX = document.getElementById('card-player-x');
+    const cardO = document.getElementById('card-player-o');
+    const glowX = document.getElementById('glow-player-x');
+    const glowO = document.getElementById('glow-player-o');
+    const badgeX = document.getElementById('badge-player-x');
+    const badgeO = document.getElementById('badge-player-o');
+    const iconX = document.getElementById('icon-box-x');
+    const iconO = document.getElementById('icon-box-o');
+    const turnPing = document.getElementById('turn-ping');
+    const turnDot = document.getElementById('turn-dot');
+    const turnText = document.getElementById('turn-text');
+
+    if (!cardX || !cardO) return;
+
+    if (winnerInfo) {
+      stopTurnTimer();
+      if (winnerInfo.winner === 'X') {
+        cardX.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high ring-2 ring-[#00f2fe] shadow-[0_0_32px_rgba(0,242,254,0.7)] scale-[1.05]";
+        cardO.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-low opacity-30 scale-95 ring-0 shadow-none";
+        badgeX.textContent = "WINNER! 🏆";
+        badgeX.className = "bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase text-[9px] tracking-widest font-black shadow-[0_0_12px_rgba(0,242,254,0.6)]";
+        badgeO.textContent = "DEFEATED";
+        badgeO.className = "bg-surface-container text-outline font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest";
+      } else if (winnerInfo.winner === 'O') {
+        cardO.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high ring-2 ring-[#e1037d] shadow-[0_0_32px_rgba(225,3,125,0.7)] scale-[1.05]";
+        cardX.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-low opacity-30 scale-95 ring-0 shadow-none";
+        badgeO.textContent = "WINNER! 🏆";
+        badgeO.className = "bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full uppercase text-[9px] tracking-widest font-black shadow-[0_0_12px_rgba(225,3,125,0.6)]";
+        badgeX.textContent = "DEFEATED";
+        badgeX.className = "bg-surface-container text-outline font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest";
+      } else {
+        cardX.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high opacity-75 scale-100 ring-1 ring-outline-variant";
+        cardO.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high opacity-75 scale-100 ring-1 ring-outline-variant";
+        badgeX.textContent = "DRAW";
+        badgeO.textContent = "DRAW";
+      }
+      updateTimerVisuals();
+      return;
+    }
+
+    if (currentPlayer === 'X') {
+      // Highlight X
+      cardX.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high ring-2 ring-[#00f2fe] shadow-[0_0_24px_rgba(0,242,254,0.45)] scale-[1.03]";
+      if (glowX) glowX.style.opacity = "1";
+      badgeX.textContent = "YOUR TURN";
+      badgeX.className = "bg-primary/20 text-primary-fixed border border-primary/40 font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest font-bold shadow-[0_0_8px_rgba(0,242,254,0.4)]";
+      iconX.className = "w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-[0_0_12px_rgba(0,242,254,0.6)] transition-all";
+
+      // Dim O
+      cardO.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-low opacity-40 scale-95 ring-0 shadow-none";
+      if (glowO) glowO.style.opacity = "0";
+      badgeO.textContent = "WAITING";
+      badgeO.className = "bg-surface-container text-outline font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest";
+      iconO.className = "w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary-container shadow-none transition-all";
+
+      // Top pill
+      if (turnPing) turnPing.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75";
+      if (turnDot) turnDot.className = "relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-container";
+      if (turnText) {
+        turnText.textContent = "Player X's Turn";
+        turnText.className = "font-label-md text-label-md uppercase text-primary tracking-wider font-semibold transition-colors duration-300";
+      }
+    } else {
+      // Highlight O
+      cardO.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-high ring-2 ring-[#e1037d] shadow-[0_0_24px_rgba(225,3,125,0.45)] scale-[1.03]";
+      if (glowO) glowO.style.opacity = "1";
+      badgeO.textContent = "YOUR TURN";
+      badgeO.className = "bg-secondary-container/20 text-secondary-container border border-secondary-container/40 font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest font-bold shadow-[0_0_8px_rgba(225,3,125,0.4)]";
+      iconO.className = "w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary-container shadow-[0_0_12px_rgba(225,3,125,0.6)] transition-all";
+
+      // Dim X
+      cardX.className = "col-span-3 p-space-sm rounded-xl flex flex-col items-center gap-1 relative overflow-hidden transition-all duration-300 bg-surface-container-low opacity-40 scale-95 ring-0 shadow-none";
+      if (glowX) glowX.style.opacity = "0";
+      badgeX.textContent = "WAITING";
+      badgeX.className = "bg-surface-container text-outline font-label-sm text-label-sm px-1.5 py-0.5 rounded-full uppercase text-[9px] tracking-widest";
+      iconX.className = "w-6 h-6 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary-container shadow-none transition-all";
+
+      // Top pill
+      if (turnPing) turnPing.className = "animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75";
+      if (turnDot) turnDot.className = "relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary-container";
+      if (turnText) {
+        turnText.textContent = "Player O's Turn";
+        turnText.className = "font-label-md text-label-md uppercase text-secondary tracking-wider font-semibold transition-colors duration-300";
+      }
+    }
+  }
+
+  function render(winnerInfo = null) {
+    const grid = document.getElementById('board-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    const winningCombo = winnerInfo && winnerInfo.combo ? winnerInfo.combo : [];
+
+    board.forEach((val, idx) => {
+      const btn = document.createElement('button');
+      const isWinningCell = winningCombo.includes(idx);
+      
+      let baseClasses = "w-full h-full rounded-lg flex items-center justify-center transition-all duration-200 active:scale-95 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] relative overflow-hidden group cursor-pointer ";
+      
+      if (isWinningCell) {
+        baseClasses += val === 'X' ? "bg-primary-container/20 ring-2 ring-primary-container shadow-[0_0_20px_rgba(0,242,254,0.6)] " : "bg-secondary-container/20 ring-2 ring-secondary-container shadow-[0_0_20px_rgba(225,3,125,0.6)] ";
+      } else {
+        baseClasses += "bg-surface-container-high hover:bg-surface-bright ";
+      }
+
+      btn.className = baseClasses;
+      btn.setAttribute('aria-label', "Cell " + idx);
+
+      if (val === 'X') {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[44px] text-primary-container drop-shadow-[0_0_12px_rgba(0,242,254,0.85)] font-black">close</span>';
+      } else if (val === 'O') {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[40px] text-secondary-container drop-shadow-[0_0_12px_rgba(225,3,125,0.85)] font-black">radio_button_unchecked</span>';
+      } else if (!isGameOver) {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[28px] text-outline/20 group-hover:text-primary-container/40 transition-colors">' + (currentPlayer === 'X' ? 'close' : 'radio_button_unchecked') + '</span>';
+      }
+
+      btn.addEventListener('click', () => handleMove(idx));
+      grid.appendChild(btn);
+    });
+
+    const sx = document.getElementById('score-x');
+    if (sx) sx.textContent = scores.X;
+    const so = document.getElementById('score-o');
+    if (so) so.textContent = scores.O;
+    const st = document.getElementById('score-tie');
+    if (st) st.textContent = scores.tie;
+
+    updateActiveVisuals(winnerInfo);
+
+    if (!isGameOver) {
+      startTurnTimer();
+    }
+  }
+
+  function handleMove(idx) {
+    if (board[idx] || isGameOver) return;
+
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    playBeep(currentPlayer === 'X' ? 650 : 440, 'triangle', 0.1);
+
+    board[idx] = currentPlayer;
+    const result = checkWinner();
+
+    if (result) {
+      isGameOver = true;
+      stopTurnTimer();
+      const turnText = document.getElementById('turn-text');
+      if (result.winner === 'TIE') {
+        scores.tie++;
+        if (turnText) turnText.textContent = "Round Draw!";
+        playBeep(300, 'sawtooth', 0.2);
+      } else {
+        scores[result.winner]++;
+        if (turnText) turnText.textContent = "Player " + result.winner + " Won!";
+        playBeep(880, 'sine', 0.15);
+        setTimeout(() => playBeep(1100, 'sine', 0.25), 160);
+      }
+      render(result);
+    } else {
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      render();
+    }
+  }
+
+  function resetRound() {
+    board = Array(9).fill(null);
+    currentPlayer = 'X';
+    isGameOver = false;
+    roundNumber++;
+    playBeep(520, 'sine', 0.1);
+    render();
+  }
+
+  const btnRestart = document.getElementById('btn-restart');
+  if (btnRestart) {
+    btnRestart.addEventListener('click', () => {
+      scores = { X: 0, O: 0, tie: 0 };
+      roundNumber = 1;
+      resetRound();
+    });
+  }
+
+  const btnNewRound = document.getElementById('btn-new-round');
+  if (btnNewRound) {
+    btnNewRound.addEventListener('click', resetRound);
+  }
+
+  render();
+</script></main>
+
+</body></html>
